@@ -1,0 +1,48 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --accent: #3b6fed;
+  --border: #d9d9d9;
+}
+
+:root[data-theme="dark"] {
+  --bg: #121212;
+  --fg: #f2f2f2;
+  --accent: #7aa2ff;
+  --border: #3a3a3a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+button {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  background-color: var(--accent);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#theme-toggle {
+  background-color: transparent;
+  color: var(--fg);
+}
